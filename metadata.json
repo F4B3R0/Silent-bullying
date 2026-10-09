@@ -1,0 +1,6 @@
+{
+  "name": "Berani Bicara",
+  "description": "Game edukasi interaktif 2D bertema anti-bullying untuk pelajar SMP dan SMA dengan simulasi cerita, sistem Empati dan Kepercayaan, serta konsultasi Guru BK.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

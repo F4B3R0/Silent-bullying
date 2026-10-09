@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom smooth animations */
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(12px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes scoreGain {
+  0% { opacity: 0; transform: translateY(0) scale(0.8); }
+  30% { opacity: 1; transform: translateY(-10px) scale(1.15); }
+  80% { opacity: 1; transform: translateY(-20px) scale(1); }
+  100% { opacity: 0; transform: translateY(-30px) scale(0.9); }
+}
+
+@keyframes pulseGently {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.92; }
+}
+
+.animate-float-up {
+  animation: floatUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-score-gain {
+  animation: scoreGain 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulseGently 2.5s ease-in-out infinite;
+}
+
+/* Custom mobile scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
